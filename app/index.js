@@ -1,0 +1,38 @@
+import React from 'react';
+import {StyleSheet, Text, View, ScrollView, Button} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+
+import HomeScreen from '../components/home/index'
+import ProfileScreen from '../components/profile/index'
+
+const Stack = createNativeStackNavigator();
+const Tab = createMaterialBottomTabNavigator();
+
+const MyStack = () => {
+  return (
+    // <NavigationContainer independent='true'>
+    //   <Stack.Navigator initialRouteName='Home'>
+    //     <Stack.Screen
+    //       name="Home"
+    //       component={HomeScreen}
+    //       options={{title: 'Welcome'}}
+    //     />
+    //     <Stack.Screen name="Profile" component={ProfileScreen} />
+    //   </Stack.Navigator>
+    // </NavigationContainer>
+    
+    <Tab.Navigator initialRouteName='Home' 
+    activeColor="#f0edf6"
+    inactiveColor="#3e2465"
+    barStyle={{ backgroundColor: '#694fad' }}>
+      <Tab.Screen name="Home" component={HomeScreen} />
+      <Tab.Screen name="Profile" component={ProfileScreen} />
+    </Tab.Navigator>
+  );
+};
+
+
+export default MyStack;

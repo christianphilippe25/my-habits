@@ -5,8 +5,9 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 
-import HomeScreen from '../components/home/index'
-import ProfileScreen from '../components/profile/index'
+import HomeScreen from './home/index'
+import ProfileScreen from './profile/index'
+import AddHabit from './addHabit/index'
 
 const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -30,6 +31,7 @@ const MyStack = () => {
     barStyle={{ backgroundColor: '#694fad' }}>
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Screen name="AddHabit" component={AddHabit} />
     </Tab.Navigator>
   );
 };

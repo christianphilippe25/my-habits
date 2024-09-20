@@ -14,24 +14,13 @@ const Tab = createMaterialBottomTabNavigator();
 
 const MyStack = () => {
   return (
-    // <NavigationContainer independent='true'>
-    //   <Stack.Navigator initialRouteName='Home'>
-    //     <Stack.Screen
-    //       name="Home"
-    //       component={HomeScreen}
-    //       options={{title: 'Welcome'}}
-    //     />
-    //     <Stack.Screen name="Profile" component={ProfileScreen} />
-    //   </Stack.Navigator>
-    // </NavigationContainer>
-    
     <Tab.Navigator initialRouteName='Home' 
     activeColor="#f0edf6"
     inactiveColor="#3e2465"
     barStyle={{ backgroundColor: '#694fad' }}>
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
-      <Tab.Screen name="AddHabit" component={AddHabit} />
+      {/* <Tab.Screen name="AddHabit" component={AddHabit} /> */}
     </Tab.Navigator>
   );
 };
